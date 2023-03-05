@@ -1,0 +1,28 @@
+﻿<Window x:Class="TM.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TM" xmlns:users="clr-namespace:TM.Users" xmlns:projects="clr-namespace:TM.Projects" xmlns:tasks="clr-namespace:TM.Tasks" xmlns:reports="clr-namespace:TM.Reports"
+        mc:Ignorable="d"
+        Title="TM" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TabControl Grid.Column="0">
+            <TabItem Header="Пользователи">
+                <users:UsersPanel/>
+            </TabItem>
+            <TabItem Header="Проекты">
+                <projects:ProjectsPanel/>
+            </TabItem>
+            <TabItem Header="Задачи">
+                <tasks:TasksPanel/>
+            </TabItem>
+            <TabItem Header="Отчеты">
+                <reports:ReportsPanel/>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
